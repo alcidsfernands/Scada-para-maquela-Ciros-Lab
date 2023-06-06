@@ -1,0 +1,526 @@
+﻿<Window x:Class="PBL_Grupo1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PBL_Grupo1" xmlns:templates="clr-namespace:PBL_Grupo1.Templates"
+        mc:Ignorable="d"
+        Icon="/Assets/ico/Apps-scan-monitor.ico" 
+        Title="CP-LAB" Height="787" Width="1509">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black" Offset="1"/>
+            <GradientStop Color="#FF585858"/>
+        </LinearGradientBrush>
+    </Window.Background>
+
+    <Grid Height="752" VerticalAlignment="Top" Margin="0,0,22,0" RenderTransformOrigin="0.666,0.522">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <TabControl Height="647" HorizontalAlignment="Left" Margin="196,13,0,0"   
+            Name="tabControl1" VerticalAlignment="Top" Width="574">
+            <TabItem Header="Overview" Name="Overview">
+                <Grid Margin="-4,0,4,0">
+                    <Canvas Margin="22,40,439,328">
+                        <Ellipse x:Name="luz_marchax" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,26.388,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_parox" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,48.275,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_autox" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,70.162,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_ind0x" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,118,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_rearmex" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,92.049,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_setax" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,144.521,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_paletIzqx" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,171.042,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_paletDerx" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,197.563,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+
+
+
+                        <Label Content="Marcha" HorizontalAlignment="Left" Height="25.557" Margin="10,17.718,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="Paro" HorizontalAlignment="Left" Height="25.557" Margin="10,43.275,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="Auto" HorizontalAlignment="Left" Height="26" Margin="10,65,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="Rearme" HorizontalAlignment="Left" Height="27" Margin="10,87,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="Ind0" HorizontalAlignment="Left" Height="29" Margin="10,110,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="Seta" HorizontalAlignment="Left" Height="26.521" Margin="10,139.394,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="PaletIzq" HorizontalAlignment="Left" Height="26.521" Margin="10,165.915,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="PaletDer" HorizontalAlignment="Left" Height="26.521" Margin="10,192.436,0,0" VerticalAlignment="Top" Width="62.582"/>
+                    </Canvas>
+                    <Canvas Margin="115,40,348,319">
+                        <Ellipse x:Name="luz_oParoLuzx" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,26.388,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_oQ1Luzx" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,48.275,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_oQ2Luzx" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,70.162,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_oCintaIzqx" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,118,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_oCintaDerx" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,92.049,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_oCintaSlowx" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,144.521,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_oStopperDownx" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,171.042,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_oMarchaLuzx" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,197.563,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+
+
+
+                        <Label Content="Paro" HorizontalAlignment="Left" Height="25.557" Margin="10,17.718,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="LuzQ1" HorizontalAlignment="Left" Height="25.557" Margin="10,43.275,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="LuzQ2" HorizontalAlignment="Left" Height="26" Margin="10,65,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="CintaDer" HorizontalAlignment="Left" Height="27" Margin="10,87,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="CintaIzq" HorizontalAlignment="Left" Height="29" Margin="10,110,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="CintaSlow" HorizontalAlignment="Left" Height="26.521" Margin="10,139.394,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="Stopper" HorizontalAlignment="Left" Height="26.521" Margin="10,165.915,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="Marcha" HorizontalAlignment="Left" Height="26.521" Margin="10,192.436,0,0" VerticalAlignment="Top" Width="62.582"/>
+                    </Canvas>
+                    <Canvas Margin="343,45,120,353">
+                        <Ellipse x:Name="elevadorArribax" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,26.388,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="elevadorAbajox" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,48.275,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="separadorCerradox" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,70.162,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="almacenVaciox" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,118,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="separadorAbiertox" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,92.049,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="paletOKx" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,144.521,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="frontOKx" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,171.042,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+
+                        <Label Content="ElevArriba" HorizontalAlignment="Left" Height="25.557" Margin="10,17.718,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="ElevAbajo" HorizontalAlignment="Left" Height="25.557" Margin="10,43.275,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="SepCerr" HorizontalAlignment="Left" Height="26" Margin="10,65,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="SepAbier" HorizontalAlignment="Left" Height="27" Margin="10,87,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="Con tapas" HorizontalAlignment="Left" Height="29" Margin="10,110,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="paletOK" HorizontalAlignment="Left" Height="26.521" Margin="10,139.394,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="frontOK" HorizontalAlignment="Left" Height="26.521" Margin="10,165.915,0,0" VerticalAlignment="Top" Width="62.582"/>
+                    </Canvas>
+                    <Canvas Margin="435,45,28,359">
+                        <Ellipse x:Name="salSubirElevx" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,26.388,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="salBajarElevx" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,48.275,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="salCerrarSepx" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,70.162,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="frenoCilindrox" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,118,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="salAbrirSepx" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,92.049,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+
+                        <Label Content="subirElev" HorizontalAlignment="Left" Height="25.557" Margin="10,17.718,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="bajarElev" HorizontalAlignment="Left" Height="25.557" Margin="10,43.275,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="cerrarSep" HorizontalAlignment="Left" Height="26" Margin="10,65,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="abrirSep" HorizontalAlignment="Left" Height="27" Margin="10,87,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="frenoCilin" HorizontalAlignment="Left" Height="29" Margin="10,110,0,0" VerticalAlignment="Top" Width="63"/>
+                    </Canvas>
+                    <Canvas Margin="205,40,258,385">
+                        <Ellipse x:Name="ind0x" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,26.388,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="ind1x" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,48.275,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="ind2x" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,70.162,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="stopperDownx" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,118,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="ind3x" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,92.049,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+
+                        <Label Content="Ind0" HorizontalAlignment="Left" Height="25.557" Margin="10,17.718,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="Ind1" HorizontalAlignment="Left" Height="25.557" Margin="10,43.275,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="Ind2" HorizontalAlignment="Left" Height="26" Margin="10,65,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="Ind3" HorizontalAlignment="Left" Height="27" Margin="10,87,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="stopDown" HorizontalAlignment="Left" Height="29" Margin="10,110,0,0" VerticalAlignment="Top" Width="63"/>
+                    </Canvas>
+                    <Canvas Margin="24,311,439,149">
+                        <Ellipse x:Name="piezaPosicionx" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,26.388,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="mediaAltura1Q1x" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,48.275,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="mediaAltura1Q2x" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,70.162,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="mediaAltura2Q2x" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,118,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="mediaAltura2Q1x" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,92.049,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+
+                        <Label Content="PiezaPos" HorizontalAlignment="Left" Height="25.557" Margin="10,17.718,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="MAlt1Q1" HorizontalAlignment="Left" Height="25.557" Margin="10,43.275,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="MAlt1Q2" HorizontalAlignment="Left" Height="26" Margin="10,65,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="MAlt2Q1" HorizontalAlignment="Left" Height="27" Margin="10,87,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="MAlt2Q2" HorizontalAlignment="Left" Height="29" Margin="10,110,0,0" VerticalAlignment="Top" Width="63"/>
+                    </Canvas>
+                    <Canvas Margin="129,311,334,189">
+                        <Ellipse x:Name="luzRojax" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,26.388,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luzAmarillax" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,48.275,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luzVerdex" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,70.162,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+
+                        <Label Content="luzRoja" HorizontalAlignment="Left" Height="25.557" Margin="10,17.718,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="luzAmarilla" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="68" Canvas.Left="10" Canvas.Top="43"/>
+                        <Label Content="luzVerde" HorizontalAlignment="Left" Height="26" Margin="10,65,0,0" VerticalAlignment="Top" Width="63"/>
+                    </Canvas>
+                    <Canvas Margin="320,311,143,68">
+                        <Ellipse x:Name="fcIzqHx" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,26.388,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="fcDerHx" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,48.275,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="paletBocaAbajox" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,70.162,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="fcSupVx" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,118,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="frontalDisponiblex" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,92.049,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="fcInfVx" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,144.521,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="trasDisponiblex" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,171.042,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+
+                        <Label Content="fc Izq" HorizontalAlignment="Left" Height="25.557" Margin="10,17.718,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="fc Der" HorizontalAlignment="Left" Height="25.557" Margin="10,43.275,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="paletAbajo" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="68" Canvas.Left="10" Canvas.Top="65"/>
+                        <Label Content="frontDisp" HorizontalAlignment="Left" Height="27" Margin="10,87,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="fc Sup" HorizontalAlignment="Left" Height="29" Margin="10,110,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="fc Inf" HorizontalAlignment="Left" Height="26.521" Margin="10,139.394,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="traserDisp" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="68" Canvas.Left="10" Canvas.Top="166"/>
+                    </Canvas>
+                    <Canvas Margin="430,311,33,94">
+                        <Ellipse x:Name="cilHIzqx" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,26.388,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="cilHDerx" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,48.275,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="taladro1x" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,70.162,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="cilinArribax" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,118,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="taladro2x" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,92.049,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="cilinAbajox" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="17" Stroke="Black" VerticalAlignment="Top" Width="17" Canvas.Left="78" Canvas.Top="144"/>
+                        <Ellipse x:Name="frenoCilinx" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="17" Stroke="Black" VerticalAlignment="Top" Width="17" Canvas.Left="78" Canvas.Top="167"/>
+
+                        <Label Content="cilindroIzq" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="68" Canvas.Left="10" Canvas.Top="18"/>
+                        <Label Content="cilindroDer" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="68" Canvas.Left="10" Canvas.Top="43"/>
+                        <Label Content="taladro1" HorizontalAlignment="Left" Height="26" Margin="10,65,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="taladro2" HorizontalAlignment="Left" Height="27" Margin="10,87,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="cilinArriba" HorizontalAlignment="Left" Height="29" Margin="10,110,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="cilinAbajo" HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="63" Canvas.Left="10" Canvas.Top="138"/>
+                        <Label Content="frenoCilin" HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="63" Canvas.Left="10" Canvas.Top="166"/>
+                    </Canvas>
+                    <Border BorderBrush="#FF898787" BorderThickness="1" HorizontalAlignment="Left" Height="227" Margin="22,45,0,0" VerticalAlignment="Top" Width="298"/>
+                    <Border BorderBrush="#FF8B8888" BorderThickness="1" HorizontalAlignment="Left" Height="227" Margin="343,45,0,0" VerticalAlignment="Top" Width="210"/>
+                    <Label Content="Conveyor" Width="120" Margin="22,10,426,560" FontWeight="Bold" FontSize="16"/>
+                    <Label Content="Estación 1" Width="120" Margin="343,15,105,555" FontSize="16" FontWeight="Bold"/>
+                    <Border BorderBrush="#FF898787" BorderThickness="1" HorizontalAlignment="Left" Height="209" Margin="22,316,0,0" VerticalAlignment="Top" Width="235"/>
+                    <Border BorderBrush="#FF898787" BorderThickness="1" HorizontalAlignment="Left" Height="209" Margin="320,316,0,0" VerticalAlignment="Top" Width="233"/>
+                    <Label Content="Estación 2" Width="120" Margin="22,281,426,289" FontSize="16" FontWeight="Bold"/>
+                    <Label Content="Estación 3" Width="120" Margin="320,281,128,289" FontSize="16" FontWeight="Bold"/>
+                    <Button Content="Estacion 1" HorizontalAlignment="Left" Margin="129,587,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+                    <Button Content="Estacion 2" HorizontalAlignment="Left" Margin="245,587,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
+                    <Button Content="Estacion 3" HorizontalAlignment="Left" Margin="365,587,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_3"/>
+                    <Border BorderBrush="#FF898787" BorderThickness="1" HorizontalAlignment="Left" Height="5" Margin="0,568,-12,0" VerticalAlignment="Top" Width="580"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Estacion1" Name="Estacion1">
+                <Grid Margin="-4,0,4,0">
+                    <Button Content="Visor3D" HorizontalAlignment="Left" Height="25" Margin="22,31,0,0" VerticalAlignment="Top" Width="74" Click="Button_Click"/>
+                    <Canvas Margin="22,106,439,46">
+                        <Ellipse x:Name="luz_marcha" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,26.388,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_paro" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,48.275,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_auto" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,70.162,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_ind0" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,118,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_rearme" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,92.049,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_seta" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,144.521,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_paletIzq" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,171.042,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_paletDer" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,197.563,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+
+
+
+                        <Label Content="Marcha" HorizontalAlignment="Left" Height="25.557" Margin="10,17.718,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="Paro" HorizontalAlignment="Left" Height="25.557" Margin="10,43.275,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="Auto" HorizontalAlignment="Left" Height="26" Margin="10,65,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="Rearme" HorizontalAlignment="Left" Height="27" Margin="10,87,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="Ind0" HorizontalAlignment="Left" Height="29" Margin="10,110,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="Seta" HorizontalAlignment="Left" Height="26.521" Margin="10,139.394,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="PaletIzq" HorizontalAlignment="Left" Height="26.521" Margin="10,165.915,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="PaletDer" HorizontalAlignment="Left" Height="26.521" Margin="10,192.436,0,0" VerticalAlignment="Top" Width="62.582"/>
+                    </Canvas>
+                    <Canvas Margin="262,106,201,46">
+                        <Ellipse x:Name="luz_oParoLuz" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,26.388,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_oQ1Luz" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,48.275,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_oQ2Luz" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,70.162,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_oCintaIzq" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,118,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_oCintaDer" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,92.049,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_oCintaSlow" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,144.521,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_oStopperDown" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,171.042,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_oMarchaLuz" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,197.563,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+
+
+
+                        <Label Content="Paro" HorizontalAlignment="Left" Height="25.557" Margin="10,17.718,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="LuzQ1" HorizontalAlignment="Left" Height="25.557" Margin="10,43.275,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="LuzQ2" HorizontalAlignment="Left" Height="26" Margin="10,65,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="CintaDer" HorizontalAlignment="Left" Height="27" Margin="10,87,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="CintaIzq" HorizontalAlignment="Left" Height="29" Margin="10,110,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="CintaSlow" HorizontalAlignment="Left" Height="26.521" Margin="10,139.394,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="Stopper" HorizontalAlignment="Left" Height="26.521" Margin="10,165.915,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="Marcha" HorizontalAlignment="Left" Height="26.521" Margin="10,192.436,0,0" VerticalAlignment="Top" Width="62.582"/>
+                    </Canvas>
+                    <Canvas Margin="134,106,329,94">
+                        <Ellipse x:Name="elevadorArriba" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,26.388,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="elevadorAbajo" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,48.275,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="separadorCerrado" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,70.162,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="almacenVacio" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,118,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="separadorAbierto" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,92.049,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="paletOK" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,144.521,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="frontOK" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,171.042,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+
+                        <Label Content="ElevArriba" HorizontalAlignment="Left" Height="25.557" Margin="10,17.718,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="ElevAbajo" HorizontalAlignment="Left" Height="25.557" Margin="10,43.275,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="SepCerr" HorizontalAlignment="Left" Height="26" Margin="10,65,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="SepAbier" HorizontalAlignment="Left" Height="27" Margin="10,87,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="Con tapas" HorizontalAlignment="Left" Height="29" Margin="10,110,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="paletOK" HorizontalAlignment="Left" Height="26.521" Margin="10,139.394,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="frontOK" HorizontalAlignment="Left" Height="26.521" Margin="10,165.915,0,0" VerticalAlignment="Top" Width="62.582"/>
+                    </Canvas>
+                    <Canvas Margin="352,106,111,139">
+                        <Ellipse x:Name="salSubirElev" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,26.388,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="salBajarElev" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,48.275,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="salCerrarSep" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,70.162,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="frenoCilindro" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,118,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="salAbrirSep" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,92.049,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+
+                        <Label Content="subirElev" HorizontalAlignment="Left" Height="25.557" Margin="10,17.718,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="bajarElev" HorizontalAlignment="Left" Height="25.557" Margin="10,43.275,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="cerrarSep" HorizontalAlignment="Left" Height="26" Margin="10,65,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="abrirSep" HorizontalAlignment="Left" Height="27" Margin="10,87,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="frenoCilin" HorizontalAlignment="Left" Height="29" Margin="10,110,0,0" VerticalAlignment="Top" Width="63"/>
+                    </Canvas>
+                    <Canvas Margin="442,106,21,139">
+                        <Ellipse x:Name="ind0" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,26.388,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="ind1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,48.275,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="ind2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,70.162,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="stopperDown" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,118,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="ind3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,92.049,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+
+                        <Label Content="Ind0" HorizontalAlignment="Left" Height="25.557" Margin="10,17.718,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="Ind1" HorizontalAlignment="Left" Height="25.557" Margin="10,43.275,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="Ind2" HorizontalAlignment="Left" Height="26" Margin="10,65,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="Ind3" HorizontalAlignment="Left" Height="27" Margin="10,87,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="stopDown" HorizontalAlignment="Left" Height="29" Margin="10,110,0,0" VerticalAlignment="Top" Width="63"/>
+                    </Canvas>
+                    <Border BorderBrush="#FF898787" BorderThickness="1" HorizontalAlignment="Left" Height="215" Margin="22,118.04,0,0" VerticalAlignment="Top" Width="235"/>
+                    <Border BorderBrush="#FF8B8888" BorderThickness="1" HorizontalAlignment="Left" Height="215" Margin="266,118.04,0,0" VerticalAlignment="Top" Width="281"/>
+                    <Label Content="ENTRADAS" Width="120" Margin="22,88.05,426,273.04" FontWeight="Bold" FontSize="16"/>
+                    <Label Content="SALIDAS" Width="120" Margin="266,88.05,182,269.95" FontSize="16" FontWeight="Bold"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Estacion2" Name="Estacion2">
+                <Grid>
+                    <Button Content="Visor3D " HorizontalAlignment="Left" Height="25" Margin="22,31,0,0" VerticalAlignment="Top" Width="75" Click="estacion2_click"/>
+                    <Canvas Margin="22,106,439,46">
+                        <Ellipse x:Name="luz_marcha2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,26.388,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_paro2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,48.275,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_auto2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,70.162,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_ind02" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,118,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_rearme2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,92.049,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_seta2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,144.521,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_paletIzq2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,171.042,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_paletDer2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,197.563,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+
+
+
+                        <Label Content="Marcha" HorizontalAlignment="Left" Height="25.557" Margin="10,17.718,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="Paro" HorizontalAlignment="Left" Height="25.557" Margin="10,43.275,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="Auto" HorizontalAlignment="Left" Height="26" Margin="10,65,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="Rearme" HorizontalAlignment="Left" Height="27" Margin="10,87,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="Ind0" HorizontalAlignment="Left" Height="29" Margin="10,110,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="Seta" HorizontalAlignment="Left" Height="26.521" Margin="10,139.394,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="PaletIzq" HorizontalAlignment="Left" Height="26.521" Margin="10,165.915,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="PaletDer" HorizontalAlignment="Left" Height="26.521" Margin="10,192.436,0,0" VerticalAlignment="Top" Width="62.582"/>
+                    </Canvas>
+                    <Canvas Margin="262,106,201,46">
+                        <Ellipse x:Name="luz_oParoLuz2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,26.388,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_oQ1Luz2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,48.275,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_oQ2Luz2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,70.162,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_oCintaIzq2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,118,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_oCintaDer2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,92.049,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_oCintaSlow2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,144.521,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_oStopperDown2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,171.042,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_oMarchaLuz2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,197.563,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+
+
+
+                        <Label Content="Paro" HorizontalAlignment="Left" Height="25.557" Margin="10,17.718,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="LuzQ1" HorizontalAlignment="Left" Height="25.557" Margin="10,43.275,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="LuzQ2" HorizontalAlignment="Left" Height="26" Margin="10,65,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="CintaDer" HorizontalAlignment="Left" Height="27" Margin="10,87,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="CintaIzq" HorizontalAlignment="Left" Height="29" Margin="10,110,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="CintaSlow" HorizontalAlignment="Left" Height="26.521" Margin="10,139.394,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="Stopper" HorizontalAlignment="Left" Height="26.521" Margin="10,165.915,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="Marcha" HorizontalAlignment="Left" Height="26.521" Margin="10,192.436,0,0" VerticalAlignment="Top" Width="62.582"/>
+                    </Canvas>
+                    <Canvas Margin="134,106,329,94">
+                        <Ellipse x:Name="piezaPosicion" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,26.388,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="mediaAltura1Q1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,48.275,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="mediaAltura1Q2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,70.162,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="mediaAltura2Q2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,118,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="mediaAltura2Q1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,92.049,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+
+                        <Label Content="PiezaPos" HorizontalAlignment="Left" Height="25.557" Margin="10,17.718,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="MAlt1Q1" HorizontalAlignment="Left" Height="25.557" Margin="10,43.275,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="MAlt1Q2" HorizontalAlignment="Left" Height="26" Margin="10,65,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="MAlt2Q1" HorizontalAlignment="Left" Height="27" Margin="10,87,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="MAlt2Q2" HorizontalAlignment="Left" Height="29" Margin="10,110,0,0" VerticalAlignment="Top" Width="63"/>
+                    </Canvas>
+                    <Canvas Margin="352,106,111,139">
+                        <Ellipse x:Name="luzRoja" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,26.388,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luzAmarilla" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,48.275,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luzVerde" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,70.162,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+
+                        <Label Content="luzRoja" HorizontalAlignment="Left" Height="25.557" Margin="10,17.718,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="luzAmarilla" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="68" Canvas.Left="10" Canvas.Top="43"/>
+                        <Label Content="luzVerde" HorizontalAlignment="Left" Height="26" Margin="10,65,0,0" VerticalAlignment="Top" Width="63"/>
+                    </Canvas>
+                    <Canvas Margin="442,106,21,139">
+                        <Ellipse x:Name="ind02" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,26.388,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="ind12" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,48.275,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="ind22" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,70.162,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="stopperDown2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,118,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="ind32" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,92.049,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+
+                        <Label Content="Ind0" HorizontalAlignment="Left" Height="25.557" Margin="10,17.718,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="Ind1" HorizontalAlignment="Left" Height="25.557" Margin="10,43.275,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="Ind2" HorizontalAlignment="Left" Height="26" Margin="10,65,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="Ind3" HorizontalAlignment="Left" Height="27" Margin="10,87,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="stopDown" HorizontalAlignment="Left" Height="29" Margin="10,110,0,0" VerticalAlignment="Top" Width="63"/>
+                    </Canvas>
+                    <Border BorderBrush="#FF898787" BorderThickness="1" HorizontalAlignment="Left" Height="215" Margin="22,118.04,0,0" VerticalAlignment="Top" Width="235"/>
+                    <Border BorderBrush="#FF8B8888" BorderThickness="1" HorizontalAlignment="Left" Height="215" Margin="266,118.04,0,0" VerticalAlignment="Top" Width="281"/>
+                    <Label Content="ENTRADAS" Width="120" Margin="22,88.05,426,273.04" FontWeight="Bold" FontSize="16"/>
+                    <Label Content="SALIDAS" Width="120" Margin="266,88.05,182,269.95" FontSize="16" FontWeight="Bold"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Estacion3" Name="Estacion3">
+                <Grid>
+                    <Button Content="Visor3D " HorizontalAlignment="Left" Height="25"  Margin="22,31,0,0" VerticalAlignment="Top" Width="75" Click="estacion3_click"/>
+                    <Canvas Margin="22,106,439,270">
+                        <Ellipse x:Name="luz_marcha3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,26.388,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_paro3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,48.275,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_auto3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,70.162,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_ind03" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,118,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_rearme3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,92.049,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_seta3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,144.521,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_paletIzq3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,171.042,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_paletDer3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,197.563,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+
+
+
+                        <Label Content="Marcha" HorizontalAlignment="Left" Height="25.557" Margin="10,17.718,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="Paro" HorizontalAlignment="Left" Height="25.557" Margin="10,43.275,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="Auto" HorizontalAlignment="Left" Height="26" Margin="10,65,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="Rearme" HorizontalAlignment="Left" Height="27" Margin="10,87,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="Ind0" HorizontalAlignment="Left" Height="29" Margin="10,110,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="Seta" HorizontalAlignment="Left" Height="26.521" Margin="10,139.394,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="PaletIzq" HorizontalAlignment="Left" Height="26.521" Margin="10,165.915,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="PaletDer" HorizontalAlignment="Left" Height="26.521" Margin="10,192.436,0,0" VerticalAlignment="Top" Width="62.582"/>
+                    </Canvas>
+                    <Canvas Margin="262,106,201,270">
+                        <Ellipse x:Name="luz_oParoLuz3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,26.388,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_oQ1Luz3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,48.275,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_oQ2Luz3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,70.162,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_oCintaIzq3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,118,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_oCintaDer3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,92.049,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_oCintaSlow3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,144.521,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_oStopperDown3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,171.042,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="luz_oMarchaLuz3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,197.563,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+
+
+
+                        <Label Content="Paro" HorizontalAlignment="Left" Height="25.557" Margin="10,17.718,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="LuzQ1" HorizontalAlignment="Left" Height="25.557" Margin="10,43.275,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="LuzQ2" HorizontalAlignment="Left" Height="26" Margin="10,65,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="CintaDer" HorizontalAlignment="Left" Height="27" Margin="10,87,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="CintaIzq" HorizontalAlignment="Left" Height="29" Margin="10,110,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="CintaSlow" HorizontalAlignment="Left" Height="26.521" Margin="10,139.394,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="Stopper" HorizontalAlignment="Left" Height="26.521" Margin="10,165.915,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="Marcha" HorizontalAlignment="Left" Height="26.521" Margin="10,192.436,0,0" VerticalAlignment="Top" Width="62.582"/>
+                    </Canvas>
+                    <Canvas Margin="134,106,329,273">
+                        <Ellipse x:Name="fcIzqH" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,26.388,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="fcDerH" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,48.275,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="paletBocaAbajo" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,70.162,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="fcSupV" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,118,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="frontalDisponible" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,92.049,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="fcInfV" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,144.521,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="trasDisponible" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,171.042,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+
+                        <Label Content="fc Izq" HorizontalAlignment="Left" Height="25.557" Margin="10,17.718,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="fc Der" HorizontalAlignment="Left" Height="25.557" Margin="10,43.275,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="paletAbajo" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="68" Canvas.Left="10" Canvas.Top="65"/>
+                        <Label Content="frontDisp" HorizontalAlignment="Left" Height="27" Margin="10,87,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="fc Sup" HorizontalAlignment="Left" Height="29" Margin="10,110,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="fc Inf" HorizontalAlignment="Left" Height="26.521" Margin="10,139.394,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="traserDisp" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="68" Canvas.Left="10" Canvas.Top="166"/>
+                    </Canvas>
+                    <Canvas Margin="352,106,111,299">
+                        <Ellipse x:Name="cilHIzq" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,26.388,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="cilHDer" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,48.275,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="taladro1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,70.162,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="cilinArriba" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,118,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="taladro2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,92.049,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="cilinAbajo" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="17" Stroke="Black" VerticalAlignment="Top" Width="17" Canvas.Left="78" Canvas.Top="144"/>
+                        <Ellipse x:Name="frenoCilin" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="17" Stroke="Black" VerticalAlignment="Top" Width="17" Canvas.Left="78" Canvas.Top="167"/>
+
+                        <Label Content="cilindroIzq" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="68" Canvas.Left="10" Canvas.Top="18"/>
+                        <Label Content="cilindroDer" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="68" Canvas.Left="10" Canvas.Top="43"/>
+                        <Label Content="taladro1" HorizontalAlignment="Left" Height="26" Margin="10,65,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="taladro2" HorizontalAlignment="Left" Height="27" Margin="10,87,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="cilinArriba" HorizontalAlignment="Left" Height="29" Margin="10,110,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="cilinAbajo" HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="63" Canvas.Left="10" Canvas.Top="138"/>
+                        <Label Content="frenoCilin" HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="63" Canvas.Left="10" Canvas.Top="166"/>
+                    </Canvas>
+                    <Canvas Margin="442,106,21,344">
+                        <Ellipse x:Name="ind03" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,26.388,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="ind13" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,48.275,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="ind23" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,70.162,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="stopperDown3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,118,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+                        <Ellipse x:Name="ind33" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="16.887" Margin="77.582,92.049,0,0" Stroke="Black" VerticalAlignment="Top" Width="17.444"/>
+
+                        <Label Content="Ind0" HorizontalAlignment="Left" Height="25.557" Margin="10,17.718,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="Ind1" HorizontalAlignment="Left" Height="25.557" Margin="10,43.275,0,0" VerticalAlignment="Top" Width="62.582"/>
+                        <Label Content="Ind2" HorizontalAlignment="Left" Height="26" Margin="10,65,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="Ind3" HorizontalAlignment="Left" Height="27" Margin="10,87,0,0" VerticalAlignment="Top" Width="63"/>
+                        <Label Content="stopDown" HorizontalAlignment="Left" Height="29" Margin="10,110,0,0" VerticalAlignment="Top" Width="63"/>
+                    </Canvas>
+                    <Border BorderBrush="#FF898787" BorderThickness="1" HorizontalAlignment="Left" Height="215" Margin="22,118.04,0,0" VerticalAlignment="Top" Width="235"/>
+                    <Border BorderBrush="#FF8B8888" BorderThickness="1" HorizontalAlignment="Left" Height="215" Margin="266,118,0,0" VerticalAlignment="Top" Width="281"/>
+                    <Label Content="ENTRADAS" Width="120" Margin="22,84,426,483" FontWeight="Bold" FontSize="16"/>
+                    <Label Content="SALIDAS" Width="120" Margin="266,88.05,182,269.95" FontSize="16" FontWeight="Bold"/>
+                </Grid>
+            </TabItem>
+
+
+
+        </TabControl>
+        <Button x:Name="btn_Salir" Content="Salir" HorizontalAlignment="Left" Height="25" Margin="1324,700,0,0" VerticalAlignment="Top" Width="101" Click="btn_Salir_Click"/>
+        <Canvas HorizontalAlignment="Left" Height="648" Margin="18,12,0,0" VerticalAlignment="Top" Width="157" Background="DimGray">
+            <Border BorderBrush="White" BorderThickness="1" HorizontalAlignment="Left" Height="2" VerticalAlignment="Top" Width="157" Canvas.Top="43" RenderTransformOrigin="0.5,0.5">
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+            </Border>
+            <Label Content="CONEXION" Width="120" FontWeight="Bold" FontSize="16" Canvas.Left="10" Canvas.Top="10" Foreground="White"/>
+            <Image x:Name="noConexion" Source="/img/r-Multiply-96.png" Height="38" Canvas.Top="575" Width="38" Canvas.Left="65" />
+            <Image x:Name="conectado" Source="/img/g-Checkmark-96.png" Height="38" Canvas.Top="575" Width="38" Canvas.Left="65" Visibility="Hidden" />
+            <Image Source="/img/w-Ethernet On Filled-100.png" Height="41" Width="36" Canvas.Left="111" Canvas.Top="597" />
+            <Image Source="/img/w-Workstation Filled-100.png" Height="58" Width="49" Canvas.Top="580" />
+
+            <Label Content="Puerto:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Canvas.Left="10" Canvas.Top="109"/>
+            <Label Content="Direccion IP:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2" Foreground="White" Canvas.Left="10" Canvas.Top="55"/>
+
+            <TextBox x:Name="txtB_IP" Text="172.21.1.1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" Grid.ColumnSpan="2" Canvas.Left="10" Canvas.Top="86"/>
+            <TextBox x:Name="txtB_Port" Text="2000" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" Grid.ColumnSpan="2" Canvas.Left="10" Canvas.Top="135"/>
+
+            <Button x:Name="btn_Conectar" Content="Conectar" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="93" Click="btn_Conectar_Click" Grid.ColumnSpan="2" Canvas.Left="10" Canvas.Top="178"/>
+            <TextBox x:Name="txtB_Hex" HorizontalAlignment="Left" Height="289" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" Grid.ColumnSpan="2" Canvas.Left="10" Canvas.Top="259"/>
+
+            <Label Content="Datos recibidos:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2" Canvas.Left="10" Canvas.Top="228.04" Foreground="White"/>
+
+            <Path Data="M46.596026,366.31126 L112.65235,367.79826" Fill="White" Height="2.487" Canvas.Left="49" Stretch="Fill" Stroke="White" Canvas.Top="618" Width="71.457" StrokeThickness="4"/>
+            <Label Content="Maqueta CP-LAB" Width="145" FontWeight="Bold" FontSize="16" Canvas.Left="812" Canvas.Top="19" Foreground="White" Height="34"/>
+
+        </Canvas>
+        <Canvas Margin="830,30,89,77">
+            <Border Height="600" Width="595" BorderBrush="#FF898787" BorderThickness="3" Canvas.Top="35" />
+            <Image Source="/img/e1_1.png" RenderTransformOrigin="0.5,0.5" Canvas.Left="185" Canvas.Top="465" Height="162" Width="260" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.273"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image Source="/img/e2_1.png" Grid.ColumnSpan="2" RenderTransformOrigin="0.742,0.677" Canvas.Left="365" Canvas.Top="290" Height="267" Width="176" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="4.049"/>
+                        <TranslateTransform X="-2.504" Y="2.142"/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+
+        </Canvas>
+
+    </Grid>
+
+</Window>
+
+

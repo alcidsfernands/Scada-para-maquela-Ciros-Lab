@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DB945ED0-3141-4C63-B75B-099B9F3E9119}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PBL_Grupo1</RootNamespace>
+    <AssemblyName>PBL_Grupo1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="3D_SCADA.xaml.cs">
+      <DependentUpon>3D_SCADA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Estacion3_SCADA.xaml.cs">
+      <DependentUpon>Estacion3_SCADA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GestionDatosEstacion1.cs" />
+    <Compile Include="SCADA.xaml.cs">
+      <DependentUpon>SCADA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Estacion2_SCADA.xaml.cs">
+      <DependentUpon>Estacion2_SCADA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Estacion1.xaml.cs">
+      <DependentUpon>Estacion1.xaml</DependentUpon>
+    </Compile>
+    <Page Include="3D_SCADA.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\style\Animation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\style\Style.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Estacion3_SCADA.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cliente.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="SCADA.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Simple Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Estacion2_SCADA.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Templates\Estacion1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\FrostedGlassBehavior.dll" />
+    <Resource Include="img\e1_1.png" />
+    <Resource Include="img\e2_1.png" />
+    <Resource Include="img\E1.PNG" />
+    <Resource Include="img\E2.PNG" />
+    <Resource Include="img\g-Checkmark-96.png" />
+    <Resource Include="img\r-Multiply-96.png" />
+    <Resource Include="img\w-Workstation Filled-100.png" />
+    <Resource Include="img\w-Ethernet On Filled-100.png" />
+    <Resource Include="img\img\cam_Xdir.png" />
+    <Resource Include="img\img\cam_XIzq.png" />
+    <Resource Include="img\img\cam_Yabajo.png" />
+    <Resource Include="img\img\cam_Yarrija.png" />
+    <Resource Include="img\img\cam_Zfrente.png" />
+    <Resource Include="img\img\cam_Ztras.png" />
+    <Resource Include="img\img\Deusto.png" />
+    <Resource Include="img\img\home-icon.png" />
+    <Resource Include="img\img\Home_icon_grey.png" />
+    <Resource Include="img\img\view_close.png" />
+    <Resource Include="img\img\view_open.png" />
+    <Resource Include="img\w-Report Card-64.png" />
+    <Resource Include="img\w-Services-64.png" />
+    <Resource Include="img\w-Settings-64.png" />
+    <Resource Include="img\cam_Xdir.png" />
+    <Resource Include="img\cam_XIzq.png" />
+    <Resource Include="img\cam_Yabajo.png" />
+    <Resource Include="img\cam_Yarrija.png" />
+    <Resource Include="img\cam_Zfrente.png" />
+    <Resource Include="img\cam_Ztras.png" />
+    <Resource Include="img\Deusto.png" />
+    <Resource Include="img\home-icon.png" />
+    <Resource Include="img\Home_icon_grey.png" />
+    <Resource Include="img\view_close.png" />
+    <Resource Include="img\view_open.png" />
+    <Resource Include="Assets\ico\Apps-scan-monitor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\themes\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
